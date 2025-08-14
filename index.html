@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Conversao.css">
+    <title>Conversor de Temperaturas</title>
+</head>
+
+<body>
+    <h1>Conversor de Temperaturas</h1>
+
+    <div class="container">
+        <div class="block"> <label for="valor">Temperatura:</label> <input type="number" id="valor"
+                placeholder="Insira o valor" />
+
+            <label for="de">Converter de:</label> <select id="de">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+                <option value="X">Personalizada</option>
+            </select> <label for="para">Converter para:</label> <select id="para">
+                <option value="all">Todas</option>
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+                <option value="X">Personalizada</option>
+            </select>
+        </div>
+        <div class="block"> <label for="nomeEscala">Nome da Escala:</label> <input type="text" id="nomeEscala"
+                placeholder="Nome da nova escala" /> <label for="siglaEscala">Sigla:</label> <input type="text"
+                id="siglaEscala" placeholder="Sigla (ex: X)" /> <label for="fusao">Ponto de Fusão (°X):</label> <input
+                type="number" id="fusao" placeholder="Ex: 25" /> <label for="ebulicao">Ponto de Ebulição (°X):</label>
+            <input type="number" id="ebulicao" placeholder="Ex: 100" /> </div>
+    </div>
+
+    <div class="button-container"> <button onclick="converter()">Converter</button> </div>
+
+    <div id="popup" role="dialog" aria-labelledby="resultadoTitulo" aria-modal="true">
+        <div class="popup-content"> <span class="close" onclick="document.getElementById('popup').style.display='none'"
+                aria-label="Fechar">×</span>
+            <h2 id="resultadoTitulo">Resultado da Conversão</h2>
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
